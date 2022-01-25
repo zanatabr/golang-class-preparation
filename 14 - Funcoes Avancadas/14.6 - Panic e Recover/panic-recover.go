@@ -6,6 +6,7 @@ import "fmt"
 // panic: para de executar o que está sendo feito, chama
 //   todas as funções que usam "defer". Se não recuperar a
 //   função, usando "recover", o programa morre
+// Não é um "erro" e não é a melhor alternativa para se trarar erros
 func alunoEstaAprovado(n1, n2 float64) bool {
 	defer recuperarExecucao()
 	media := (n1 + n2) / 2
