@@ -26,5 +26,5 @@ func main() {
 
 	// perceber que não foi necessário acessar
 	//  e1.pessoa.altura, mas sim simplesmente
-	// e1.altura
+	//  e1.altura
 }
