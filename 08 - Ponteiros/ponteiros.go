@@ -10,7 +10,7 @@ func main() {
 	// ou seja, são distintas
 
 	fmt.Println(variavel1, variavel2)
-	// Ex.: 10 1o
+	// Ex.: 10 10
 
 	variavel2++
 	fmt.Println(variavel1, variavel2)
