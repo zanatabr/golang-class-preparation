@@ -28,6 +28,11 @@ func main() {
 
 	// select: estrutura muito parecida com o "switch", mas é
 	// específica para o uso com concorrência
+	//
+	// Aqui já não teríamos o problema da espera, pois caso
+	// o cana1 estiver pronto pra receber, segue o processamento,
+	// e o mesmo acontece com o canal2. Um não precisa ficar
+	// esperando pelo outro.
 	for {
 		select {
 		case mensagemCanal1 := <-canal1:

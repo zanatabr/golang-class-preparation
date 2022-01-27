@@ -34,6 +34,7 @@ func main() {
 	// [C] aguarda 500ms para receber uma mensagem
 	// [D] aguarda 2s para receber a mensagem e fica parado
 	//     o que vai prejudicar [C] na próxima iteração
+	//     e assim por diante.
 	for {
 		mensagemCanal1 := <-canal1
 		fmt.Println(mensagemCanal1)

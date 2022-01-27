@@ -16,7 +16,7 @@ func main() {
 	// fatal error: all goroutines are asleep - deadlock!
 	//
 	// Por que?
-	// Em [B] temos uma operação bloqueante. Estamos escrevendo
+	// Em [B] temos uma operação bloqueante. Estamos "escrevendo"
 	// no canal e esperamos que já tenha alguém pra receber.
 	// Quem receberia a mensagem seria o passo [C], mas nunca
 	// chegaremos nesse passo. Por isso ocorre esse deadlock
