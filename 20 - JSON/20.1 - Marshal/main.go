@@ -14,6 +14,19 @@ type cachorro struct {
 	Idade uint   `json:"idade"`
 }
 
+// No mapeamento, caso queira "ignorar" algum campo, basta
+// mapear com um "hífen". Isso serve para marshal e unmershal
+//
+// Segue exemplo:
+//
+// type cachorro struct {
+// 	Nome  string `json:"nome"`
+// 	Raca  string `json:"-"`
+// 	Idade uint   `json:"idade"`
+// }
+//
+// Neste caso, o campo Raca será omitido no JSON
+
 func main() {
 	c := cachorro{"Rex", "Dálmata", 3}
 
