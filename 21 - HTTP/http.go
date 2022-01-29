@@ -24,10 +24,12 @@ func main() {
 		w.Write([]byte("Olá Mundo!"))
 	})
 
-	http.HandleFunc("/usuarios", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("Carregar página de usuários!"))
-	})
+	http.HandleFunc("/usuarios", carregarUsuarios)
 
 	// Deixa um servidor rodando no port 5000
 	log.Fatal(http.ListenAndServe(":5000", nil))
+}
+
+func carregarUsuarios(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("Carregar página de usuários!"))
 }
